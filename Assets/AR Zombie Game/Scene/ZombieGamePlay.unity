@@ -678,6 +678,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5362269941579774125, guid: c6f73605745b1294087fbce6face9065, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: c6f73605745b1294087fbce6face9065, type: 3}
@@ -892,6 +896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAnimation: {fileID: 1432946323}
+  meshRenderer: {fileID: 1503468611}
 --- !u!1 &1503468608
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,7 +925,7 @@ Transform:
   m_GameObject: {fileID: 1503468608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.1247, y: -0.12, z: -0.0607}
-  m_LocalScale: {x: 0.11217474, y: 0.01, z: 0.11349853}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 205994461}
@@ -947,7 +952,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1503468608}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1267,6 +1272,7 @@ MonoBehaviour:
   isPlaced: 0
   planeFinder: {fileID: 1711519615}
   player: {fileID: 1210674312}
+  gamePlayCanvas: {fileID: 1450793154}
 --- !u!1 &2030157977
 GameObject:
   m_ObjectHideFlags: 0
