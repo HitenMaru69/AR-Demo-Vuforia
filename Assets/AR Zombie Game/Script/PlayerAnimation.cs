@@ -5,8 +5,13 @@ using UnityEngine;
 public class PlayerAnimation : MonoBehaviour
 {
     [SerializeField] Animator playerAnimator;
+    [SerializeField] bool isAttack;
 
 
+    private void Start()
+    {
+         PlayIdleAnimation();
+    }
 
     public void PlayIdleAnimation()
     {
@@ -22,10 +27,25 @@ public class PlayerAnimation : MonoBehaviour
         playerAnimator.SetBool("isAttack", false);
     }
 
-    public void PLayAttackAnimation()
+    public void PlayAttackAnimation()
     {
+        isAttack = true;
         playerAnimator.SetBool("isIdle", false);
         playerAnimator.SetBool("isRun", false);
         playerAnimator.SetBool("isAttack", true);
+        StartCoroutine(PlayIdleAnimationAfterAttack());
+
+    }
+
+    IEnumerator PlayIdleAnimationAfterAttack()
+    {
+        yield return new WaitForSeconds(2f);
+        PlayIdleAnimation();
+        isAttack = false;
+    }
+
+    public bool GetIsAttack()
+    {
+        return isAttack;
     }
 }
