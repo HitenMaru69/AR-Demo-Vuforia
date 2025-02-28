@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb3e19c109afaa941ad7dd7c94bacf78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 10
+  playerSpeed: 0.1
   rb: {fileID: 5362269941579774113}
   playerAnimation: {fileID: 5362269941579774119}
   joystick: {fileID: 0}
@@ -96,6 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAnimator: {fileID: 5362269940271482457}
+  isAttack: 0
+  player: {fileID: -1964941287533925125}
 --- !u!114 &-1964941287533925125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,6 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 5362269941579774113}
+  boxCollider: {fileID: 1160081245}
 --- !u!1001 &5362269940271482458
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -161,13 +164,67 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8183481454299698827, guid: 16b4598115b0def4c9cc4a95affa5d53, type: 3}
+      propertyPath: m_TagString
+      value: Axe
+      objectReference: {fileID: 0}
+    - target: {fileID: -6085421439478062334, guid: 16b4598115b0def4c9cc4a95affa5d53, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: -6085421439478062334, guid: 16b4598115b0def4c9cc4a95affa5d53, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: -6085421439478062334, guid: 16b4598115b0def4c9cc4a95affa5d53, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.78
+      objectReference: {fileID: 0}
+    - target: {fileID: -5770850338934133332, guid: 16b4598115b0def4c9cc4a95affa5d53, type: 3}
+      propertyPath: m_TagString
+      value: Axe
+      objectReference: {fileID: 0}
+    - target: {fileID: 234480625599603528, guid: 16b4598115b0def4c9cc4a95affa5d53, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 234480625599603528, guid: 16b4598115b0def4c9cc4a95affa5d53, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.181
+      objectReference: {fileID: 0}
+    - target: {fileID: 234480625599603528, guid: 16b4598115b0def4c9cc4a95affa5d53, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.344
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 16b4598115b0def4c9cc4a95affa5d53, type: 3}
       propertyPath: m_Name
       value: Brute@Great Sword Idle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 16b4598115b0def4c9cc4a95affa5d53, type: 3}
+      propertyPath: m_TagString
+      value: Axe
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 16b4598115b0def4c9cc4a95affa5d53, type: 3}
+--- !u!1 &4901309338537897775 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8183481454299698827, guid: 16b4598115b0def4c9cc4a95affa5d53, type: 3}
+  m_PrefabInstance: {fileID: 5362269940271482458}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1160081245
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4901309338537897775}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.5036144, z: 1}
+  m_Center: {x: -0.000000035318184, y: -0.24819331, z: 0.000000042253053}
 --- !u!1 &5092434044217342731 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 16b4598115b0def4c9cc4a95affa5d53, type: 3}
