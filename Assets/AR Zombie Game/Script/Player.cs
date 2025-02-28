@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField] Rigidbody rb;
     [SerializeField] BoxCollider boxCollider;
     [SerializeField] float forceSpeed;
+    [SerializeField] HealthBar healthBar;
 
     private void Start()
     {
@@ -19,7 +20,17 @@ public class Player : MonoBehaviour
     {
         if(other.gameObject.tag == "Enemy")
         {
-            rb.velocity = -transform.forward * forceSpeed;
+            healthBar.ReduceHealth();
+
+            if(healthBar.GetCurrentHealth() > 0)
+            {
+                rb.velocity = -transform.forward * forceSpeed;
+            }
+            else
+            {
+                // Player Die Funcionality
+            }
+            
         }
     }
 
@@ -38,8 +49,11 @@ public class Player : MonoBehaviour
         boxCollider.enabled = false;
     }
 
+    private void PlayerDie()
+    {
 
-    // Player and Enemy Health
+    }
+
     // Spwan Enemy 
     // UI
 }

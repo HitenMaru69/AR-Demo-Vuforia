@@ -823,13 +823,13 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 281869495, guid: 01236ee3c8f0d714ba28714d265d3061, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2145190503}
     - target: {fileID: 425026744555898773, guid: 01236ee3c8f0d714ba28714d265d3061, type: 3}
       propertyPath: m_Name
       value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 425026744555898777, guid: 01236ee3c8f0d714ba28714d265d3061, type: 3}
-      propertyPath: forceSpeed
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 425026744555898778, guid: 01236ee3c8f0d714ba28714d265d3061, type: 3}
       propertyPath: m_RootOrder
@@ -845,7 +845,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 425026744555898778, guid: 01236ee3c8f0d714ba28714d265d3061, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.41
+      value: -3.66
       objectReference: {fileID: 0}
     - target: {fileID: 425026744555898778, guid: 01236ee3c8f0d714ba28714d265d3061, type: 3}
       propertyPath: m_LocalRotation.w
@@ -886,10 +886,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -1964941287533925125, guid: c6f73605745b1294087fbce6face9065, type: 3}
-      propertyPath: forceSpeed
-      value: 2
-      objectReference: {fileID: 0}
+    - target: {fileID: 327308670, guid: c6f73605745b1294087fbce6face9065, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2145190503}
     - target: {fileID: 5362269941579774114, guid: c6f73605745b1294087fbce6face9065, type: 3}
       propertyPath: m_RootOrder
       value: 4

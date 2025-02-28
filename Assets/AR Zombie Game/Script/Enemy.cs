@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] EnemyAnimation enemyAnimation;
     [SerializeField] BoxCollider boxCollider;
     [SerializeField] float forceSpeed;
+    [SerializeField] HealthBar healthBar;
 
 
     private void Start()
@@ -27,7 +28,16 @@ public class Enemy : MonoBehaviour
     {
         if(other.gameObject.tag == "Axe")
         {
-            rb.velocity = -transform.forward * forceSpeed;
+            healthBar.ReduceHealth();
+            if(healthBar.GetCurrentHealth() > 0)
+            {
+                rb.velocity = -transform.forward * forceSpeed;
+            }
+            else
+            {
+                // Enemy Die Functionality
+            }
+        
         }
     }
 
@@ -71,5 +81,9 @@ public class Enemy : MonoBehaviour
 
     }
 
+    private void EnemyDie()
+    {
+
+    }
 
 }

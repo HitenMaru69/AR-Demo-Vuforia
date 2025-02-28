@@ -11,7 +11,6 @@ public class PlaceObject : MonoBehaviour
     [SerializeField] Enemy enemy;
     [SerializeField] GameObject gamePlayCanvas;
  
-   
 
     private void Start()
     {
