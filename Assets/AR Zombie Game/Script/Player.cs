@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] Rigidbody rb;
     [SerializeField] BoxCollider boxCollider;
+    [SerializeField] float forceSpeed;
 
     private void Start()
     {
@@ -18,8 +19,7 @@ public class Player : MonoBehaviour
     {
         if(other.gameObject.tag == "Enemy")
         {
-            Debug.Log("Zombie attack");
-            // Add Logic for player die or reduce health
+            rb.velocity = -transform.forward * forceSpeed;
         }
     }
 
@@ -38,4 +38,8 @@ public class Player : MonoBehaviour
         boxCollider.enabled = false;
     }
 
+
+    // Player and Enemy Health
+    // Spwan Enemy 
+    // UI
 }

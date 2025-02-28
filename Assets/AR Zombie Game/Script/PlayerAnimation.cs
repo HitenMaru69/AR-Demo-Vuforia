@@ -14,6 +14,13 @@ public class PlayerAnimation : MonoBehaviour
          PlayIdleAnimation();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            PlayAttackAnimation();
+        }
+    }
     public void PlayIdleAnimation()
     {
         playerAnimator.SetBool("isIdle",true);

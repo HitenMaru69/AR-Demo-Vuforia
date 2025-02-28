@@ -6,6 +6,9 @@ public class EnemyAnimation : MonoBehaviour
 {
     [SerializeField] Animator enemyAnimator;
 
+
+
+
     public void PlayWalkAnimation()
     {
         enemyAnimator.SetBool("isRun", true);

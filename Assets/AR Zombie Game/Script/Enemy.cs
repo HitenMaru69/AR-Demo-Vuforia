@@ -9,11 +9,13 @@ public class Enemy : MonoBehaviour
     [SerializeField] float distanceBetweenPlayerAndZombie;
     [SerializeField] EnemyAnimation enemyAnimation;
     [SerializeField] BoxCollider boxCollider;
+    [SerializeField] float forceSpeed;
 
 
     private void Start()
     {
         boxCollider.enabled = false;
+        rb.isKinematic = true;
     }
 
     private void FixedUpdate()
@@ -25,11 +27,15 @@ public class Enemy : MonoBehaviour
     {
         if(other.gameObject.tag == "Axe")
         {
-            Debug.Log("Player Attack");
-            // add logic for kill Zombies
+            rb.velocity = -transform.forward * forceSpeed;
         }
     }
 
+
+    public void SetRigidBodyDynamic()
+    {
+        rb.isKinematic = false;
+    }
 
     private void FollowPlayer()
     {

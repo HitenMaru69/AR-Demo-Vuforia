@@ -8,6 +8,7 @@ public class PlaceObject : MonoBehaviour
     [SerializeField] private bool isPlaced;
     [SerializeField] private GameObject planeFinder;
     [SerializeField] Player player;
+    [SerializeField] Enemy enemy;
     [SerializeField] GameObject gamePlayCanvas;
  
    
@@ -25,6 +26,7 @@ public class PlaceObject : MonoBehaviour
         {
             isPlaced = true;
             player.SetToRigidbodyNormal();
+            enemy.SetRigidBodyDynamic();
             gamePlayCanvas.SetActive(true);
             planeFinder.SetActive(false);
         }
