@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 425026744555898779}
   - component: {fileID: 425026744555898776}
   - component: {fileID: 425026744555898777}
+  - component: {fileID: 425026744693796358}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -77,6 +78,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef9f7635cf3567343a9c7629492a32e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 425026744555898776}
+  enemySpeed: 0.1
+  distanceBetweenPlayerAndZombie: 1.5
+  enemyAnimation: {fileID: 425026744693796358}
+  boxCollider: {fileID: 1808097831}
+--- !u!114 &425026744693796358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425026744555898773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc74ea4bc8578e943886af214afdc7fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAnimator: {fileID: 425026744693796356}
 --- !u!1001 &425026744664375524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -133,6 +152,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombiegirl W Kurniawan
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd1daeb008963b54d899ceddc3ed1e10, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2715566404302941441, guid: dd1daeb008963b54d899ceddc3ed1e10, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: dd1daeb008963b54d899ceddc3ed1e10, type: 3}
@@ -141,3 +168,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dd1daeb008963b54d899ceddc3ed1e10, type: 3}
   m_PrefabInstance: {fileID: 425026744664375524}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &658816661684485557 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dd1daeb008963b54d899ceddc3ed1e10, type: 3}
+  m_PrefabInstance: {fileID: 425026744664375524}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &425026744693796356
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658816661684485557}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7ae30817545dd1a42bbdd043d40060df, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &2326776419091541477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2715566404302941441, guid: dd1daeb008963b54d899ceddc3ed1e10, type: 3}
+  m_PrefabInstance: {fileID: 425026744664375524}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1808097831
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2326776419091541477}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.20321341, y: 0.83310264, z: 0.1332119}
+  m_Center: {x: -0.014952953, y: -0.08344877, z: -0.0063512963}

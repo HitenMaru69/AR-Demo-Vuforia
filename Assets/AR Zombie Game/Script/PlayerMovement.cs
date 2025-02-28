@@ -16,8 +16,6 @@ public class PlayerMovement : MonoBehaviour
         xdir = Input.GetAxisRaw("Horizontal");
         zdir  = Input.GetAxisRaw("Vertical");
         
-        
-
         if(Mathf.Abs(xdir) > 0 || Mathf.Abs(zdir) > 0 || 
             Mathf.Abs(joystick.Horizontal) > 0 || Mathf.Abs(joystick.Vertical) > 0)
         {
@@ -71,9 +69,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-
     }
-
 
 
 }

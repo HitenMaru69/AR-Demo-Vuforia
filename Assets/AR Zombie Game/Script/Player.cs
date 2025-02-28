@@ -13,6 +13,17 @@ public class Player : MonoBehaviour
         boxCollider.enabled = false;
     }
 
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Enemy")
+        {
+            Debug.Log("Zombie attack");
+            // Add Logic for player die or reduce health
+        }
+    }
+
+
     public void SetToRigidbodyNormal()
     {
         rb.isKinematic = false;
