@@ -14,10 +14,15 @@ public class Enemy : MonoBehaviour
     [SerializeField] ParticleSystem bloodParticales;
 
 
+    private void Awake()
+    {
+        rb.isKinematic = true;
+    }
+
     private void Start()
     {
         boxCollider.enabled = false;
-        rb.isKinematic = true;
+       
     }
 
     private void FixedUpdate()
@@ -31,15 +36,12 @@ public class Enemy : MonoBehaviour
         {
             healthBar.ReduceHealth();
             bloodParticales.Play();
-            if (healthBar.GetCurrentHealth() > 0)
-            {
-                
-                rb.velocity = -transform.forward * forceSpeed;
-            }
-            else
+            rb.velocity = -transform.forward * forceSpeed;
+            if (healthBar.GetCurrentHealth() <= 0)
             {
                 EnemyDie();
             }
+
         
         }
     }
@@ -101,7 +103,7 @@ public class Enemy : MonoBehaviour
 
     private void EnemyDie()
     {
-        Destroy(this.gameObject);
+        Destroy(this.gameObject,1f);
     }
 
 }

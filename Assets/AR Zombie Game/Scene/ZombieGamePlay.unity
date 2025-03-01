@@ -422,7 +422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSpwan: 0
   enemyPrefeb: {fileID: 425026744555898773, guid: 01236ee3c8f0d714ba28714d265d3061, type: 3}
-  spawnInterval: 5
+  spawnInterval: 10
 --- !u!1001 &852495906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -434,6 +434,10 @@ PrefabInstance:
     - target: {fileID: 425026744555898773, guid: 01236ee3c8f0d714ba28714d265d3061, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 425026744555898776, guid: 01236ee3c8f0d714ba28714d265d3061, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 425026744555898778, guid: 01236ee3c8f0d714ba28714d265d3061, type: 3}
       propertyPath: m_RootOrder
@@ -740,6 +744,10 @@ PrefabInstance:
     - target: {fileID: 5092434044217342731, guid: c6f73605745b1294087fbce6face9065, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5362269941579774113, guid: c6f73605745b1294087fbce6face9065, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5362269941579774114, guid: c6f73605745b1294087fbce6face9065, type: 3}
       propertyPath: m_RootOrder

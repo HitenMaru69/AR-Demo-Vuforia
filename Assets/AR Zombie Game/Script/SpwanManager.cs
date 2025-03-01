@@ -23,7 +23,6 @@ public class SpwanManager : MonoBehaviour
     }
 
 
-
     void Update()
     {
         if (isSpwan)
@@ -47,16 +46,15 @@ public class SpwanManager : MonoBehaviour
             float randomx = Random.Range(-1f, 1f);
             float randomz = Random.Range(-1f, 1f);
 
-            Vector3 spwanPos = new Vector3(playerPos.x + randomx, 0, playerPos.z + randomz);
+            Vector3 spwanPos = new Vector3(playerPos.x + randomx, playerPos.y, playerPos.z + randomz);
 
-            Instantiate(enemyPrefeb,spwanPos, Quaternion.identity);
+            GameObject obj = Instantiate(enemyPrefeb,spwanPos, Quaternion.identity);
+            Enemy enemy = obj.GetComponent<Enemy>();
+            enemy.SetRigidBodyDynamic();
 
         }
         
     }
-
-
-    // Tried without conditions like isspawn;
 
 }
 

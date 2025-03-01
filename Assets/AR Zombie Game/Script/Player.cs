@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
             }
             else
             {
+
                 PlayerDie();
             }
             
@@ -54,6 +55,5 @@ public class Player : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    // Spwan Enemy 
     // UI
 }
