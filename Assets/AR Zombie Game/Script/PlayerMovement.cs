@@ -5,9 +5,10 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float playerSpeed;
-    [SerializeField]private  Rigidbody rb;
+    [SerializeField] private  Rigidbody rb;
     [SerializeField] PlayerAnimation playerAnimation;
     [SerializeField] FixedJoystick joystick;
+    [SerializeField] Player player;
     private float xdir;
     private float zdir;
 

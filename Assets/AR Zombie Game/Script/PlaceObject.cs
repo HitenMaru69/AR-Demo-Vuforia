@@ -16,6 +16,7 @@ public class PlaceObject : MonoBehaviour
     {
         isPlaced = false;
         gamePlayCanvas.SetActive(false);
+
     }
 
 

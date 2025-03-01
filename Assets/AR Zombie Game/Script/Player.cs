@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
 
     private void PlayerDie()
     {
-
+        Destroy(this.gameObject);
     }
 
     // Spwan Enemy 

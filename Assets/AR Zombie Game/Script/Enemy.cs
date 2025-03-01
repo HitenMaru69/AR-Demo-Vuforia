@@ -74,16 +74,27 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public void DisableBoxCollider()
+    {
+        boxCollider.enabled = false;
+    }
+
     private void AttackPlayer()
     {
-        enemyAnimation.PlayAttackAnimation();
-        boxCollider.enabled = true;
 
+        StartCoroutine(DelayOnAnimations());
+    }
+
+    IEnumerator DelayOnAnimations()
+    {
+        enemyAnimation.PlayAttackAnimation();
+        yield return new WaitForSeconds(1f);
+        boxCollider.enabled = true;
     }
 
     private void EnemyDie()
     {
-
+        Destroy(this.gameObject);
     }
 
 }
