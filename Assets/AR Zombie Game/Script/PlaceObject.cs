@@ -19,7 +19,6 @@ public class PlaceObject : MonoBehaviour
 
     }
 
-
     public void PlaceContent(Transform content)
     {
         if (!isPlaced) 
