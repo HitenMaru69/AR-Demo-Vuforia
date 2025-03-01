@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
             }
             else
             {
-                // Player Die Funcionality
+                PlayerDie();
             }
             
         }

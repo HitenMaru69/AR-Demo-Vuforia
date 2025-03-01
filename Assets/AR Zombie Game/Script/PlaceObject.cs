@@ -28,6 +28,7 @@ public class PlaceObject : MonoBehaviour
             player.SetToRigidbodyNormal();
             enemy.SetRigidBodyDynamic();
             gamePlayCanvas.SetActive(true);
+            SpwanManager.instance.isSpwan = true;
             planeFinder.SetActive(false);
         }
     }

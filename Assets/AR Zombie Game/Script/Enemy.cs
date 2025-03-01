@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] BoxCollider boxCollider;
     [SerializeField] float forceSpeed;
     [SerializeField] HealthBar healthBar;
+    [SerializeField] ParticleSystem bloodParticales;
 
 
     private void Start()
@@ -29,13 +30,15 @@ public class Enemy : MonoBehaviour
         if(other.gameObject.tag == "Axe")
         {
             healthBar.ReduceHealth();
-            if(healthBar.GetCurrentHealth() > 0)
+            bloodParticales.Play();
+            if (healthBar.GetCurrentHealth() > 0)
             {
+                
                 rb.velocity = -transform.forward * forceSpeed;
             }
             else
             {
-                // Enemy Die Functionality
+                EnemyDie();
             }
         
         }
@@ -51,26 +54,30 @@ public class Enemy : MonoBehaviour
     {
         Player player = FindObjectOfType<Player>();
 
-        float distance = Vector3.Distance(transform.position, player.transform.position);
-
-        if (distance > distanceBetweenPlayerAndZombie)
+        if (player != null)
         {
-            Vector3 direction =  player.gameObject.transform.position - transform.position ;
+            float distance = Vector3.Distance(transform.position, player.transform.position);
 
-            rb.MovePosition(rb.position + direction * enemySpeed * Time.deltaTime);
+            if (distance > distanceBetweenPlayerAndZombie)
+            {
+                Vector3 direction = player.gameObject.transform.position - transform.position;
 
-            if (direction != Vector3.zero) { 
-            
-                transform.forward = direction;
+                rb.MovePosition(rb.position + direction * enemySpeed * Time.deltaTime);
+
+                if (direction != Vector3.zero)
+                {
+
+                    transform.forward = direction;
+                }
+
+                enemyAnimation.PlayWalkAnimation();
+
+                boxCollider.enabled = false;
             }
-
-            enemyAnimation.PlayWalkAnimation();
-
-            boxCollider.enabled = false;
-        }
-        else
-        {
-            AttackPlayer();
+            else
+            {
+                AttackPlayer();
+            }
         }
     }
 
