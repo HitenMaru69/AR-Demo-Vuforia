@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBar : MonoBehaviour
+public class HealthBar : MonoBehaviour,IDamage
 {
     [SerializeField] Image heathBar;
     [SerializeField] Image health;
@@ -29,8 +29,8 @@ public class HealthBar : MonoBehaviour
         health.fillAmount = currentHealth / totalHealth;
     }
 
-    public float GetCurrentHealth()
+    public float GetHealth()
     {
-        return currentHealth;   
+        return currentHealth;
     }
 }

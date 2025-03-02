@@ -342,7 +342,6 @@ MonoBehaviour:
   enemyAnimation: {fileID: 425026744693796358}
   boxCollider: {fileID: 1808097831}
   forceSpeed: 1.8
-  healthBar: {fileID: 1945646109}
   bloodParticales: {fileID: 4098714526563263625}
 --- !u!114 &425026744693796358
 MonoBehaviour:

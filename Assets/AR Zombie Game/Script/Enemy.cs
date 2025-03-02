@@ -10,7 +10,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] EnemyAnimation enemyAnimation;
     [SerializeField] BoxCollider boxCollider;
     [SerializeField] float forceSpeed;
-    [SerializeField] HealthBar healthBar;
     [SerializeField] ParticleSystem bloodParticales;
 
 
@@ -34,15 +33,14 @@ public class Enemy : MonoBehaviour
     {
         if(other.gameObject.tag == "Axe")
         {
-            healthBar.ReduceHealth();
+            IDamage damage = GetComponent<IDamage>();
+            damage.ReduceHealth();
             bloodParticales.Play();
-            rb.velocity = -transform.forward * forceSpeed;
-            if (healthBar.GetCurrentHealth() <= 0)
+            rb.velocity =  -transform.forward * forceSpeed;
+            if (damage.GetHealth() <= 0)
             {
                 EnemyDie();
             }
-
-        
         }
     }
 
@@ -103,7 +101,7 @@ public class Enemy : MonoBehaviour
 
     private void EnemyDie()
     {
-        Destroy(this.gameObject,1f);
+        Destroy(this.gameObject,0.5f);
     }
 
 }

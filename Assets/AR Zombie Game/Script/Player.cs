@@ -7,8 +7,6 @@ public class Player : MonoBehaviour
     [SerializeField] Rigidbody rb;
     [SerializeField] BoxCollider boxCollider;
     [SerializeField] float forceSpeed;
-    [SerializeField] HealthBar healthBar;
-
     private void Start()
     {
         rb.isKinematic = true;
@@ -20,9 +18,10 @@ public class Player : MonoBehaviour
     {
         if(other.gameObject.tag == "Enemy")
         {
-            healthBar.ReduceHealth();
+            IDamage damage = GetComponent<IDamage>();
+            damage.ReduceHealth();
 
-            if(healthBar.GetCurrentHealth() > 0)
+            if(damage.GetHealth() > 0)
             {
                 rb.velocity = -transform.forward * forceSpeed;
             }

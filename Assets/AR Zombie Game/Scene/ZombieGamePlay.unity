@@ -422,7 +422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSpwan: 0
   enemyPrefeb: {fileID: 425026744555898773, guid: 01236ee3c8f0d714ba28714d265d3061, type: 3}
-  spawnInterval: 10
+  spawnInterval: 8
 --- !u!1001 &852495906
 PrefabInstance:
   m_ObjectHideFlags: 0
