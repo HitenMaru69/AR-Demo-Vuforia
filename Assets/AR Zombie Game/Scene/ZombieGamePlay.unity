@@ -422,7 +422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSpwan: 0
   enemyPrefeb: {fileID: 425026744555898773, guid: 01236ee3c8f0d714ba28714d265d3061, type: 3}
-  spawnInterval: 8
+  spawnInterval: 7
 --- !u!1001 &852495906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -442,6 +442,18 @@ PrefabInstance:
     - target: {fileID: 425026744555898778, guid: 01236ee3c8f0d714ba28714d265d3061, type: 3}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 425026744555898778, guid: 01236ee3c8f0d714ba28714d265d3061, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 425026744555898778, guid: 01236ee3c8f0d714ba28714d265d3061, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 425026744555898778, guid: 01236ee3c8f0d714ba28714d265d3061, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 425026744555898778, guid: 01236ee3c8f0d714ba28714d265d3061, type: 3}
       propertyPath: m_LocalPosition.x
@@ -739,7 +751,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1964941287533925125, guid: c6f73605745b1294087fbce6face9065, type: 3}
       propertyPath: forceSpeed
-      value: 1.5
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 5092434044217342731, guid: c6f73605745b1294087fbce6face9065, type: 3}
       propertyPath: m_TagString
@@ -755,15 +767,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5362269941579774114, guid: c6f73605745b1294087fbce6face9065, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.1
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 5362269941579774114, guid: c6f73605745b1294087fbce6face9065, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 5362269941579774114, guid: c6f73605745b1294087fbce6face9065, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.1
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 5362269941579774114, guid: c6f73605745b1294087fbce6face9065, type: 3}
       propertyPath: m_LocalPosition.x
@@ -815,7 +827,7 @@ PrefabInstance:
       objectReference: {fileID: 1039084840}
     - target: {fileID: 5362269941579774118, guid: c6f73605745b1294087fbce6face9065, type: 3}
       propertyPath: playerSpeed
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 5362269941579774125, guid: c6f73605745b1294087fbce6face9065, type: 3}
       propertyPath: m_Name
